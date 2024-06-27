@@ -1,10 +1,16 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
+import Header from './components/Header';
+import Form from './components/Form';
+import ResultTable from './components/ResultTable';
 
 function App() {
 
   return (
-    <>
+    <main>
+      <Header />
+      <Form />
+      <ResultTable />
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -25,7 +31,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
-    </>
+    </main>
   )
 }
 
