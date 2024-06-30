@@ -1,4 +1,4 @@
-import { Investment } from '../types/common.types';
+import { Investment, Result } from '../types/common.types';
 
 // This function expects a JS object as an argument
 // The object should contain the following properties
@@ -11,8 +11,8 @@ export function calculateInvestmentResults({
   annualInvestment,
   expectedReturn,
   duration
-}: Investment) {
-  const annualData = [];
+}: Investment): Result[] {
+  const annualData: Result[] = [];
   let investmentValue = initialInvestment;
 
   for (let i = 0; i < duration; i++) {
