@@ -1,5 +1,11 @@
 import { Investment } from './common.types';
+import { Dispatch, SetStateAction } from 'react';
 
 export type FormProps = {
-  onInvestmentChange: (currentInvestment: Investment) => void
+  investment: Investment | undefined,
+  onInvestmentChange: Dispatch<SetStateAction<Investment>>;
+}
+
+export type ResultTableProps = {
+  investment: Investment
 }
