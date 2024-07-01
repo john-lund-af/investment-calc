@@ -10,5 +10,5 @@ export interface Result {
   year: number,
   interest: number,
   valueEndOfYear: number,
-  annualInvestement: number
+  annualInvestment: number
 }
