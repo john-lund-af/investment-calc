@@ -13,13 +13,14 @@ function App() {
     expectedReturn: 0
   });
 
-  const allValuesFilled = Object.values(investment).every(value => value && !isNaN(value));
+  const inputIsValid = Object.values(investment).every(value => !isNaN(value)) && investment.duration > 0;
 
   return (
     <main>
       <Header />
       <Form investment={investment} onInvestmentChange={setInvestment} />
-      {allValuesFilled && <ResultTable investment={investment} />}
+      {inputIsValid && <ResultTable investment={investment} />}
+      {!inputIsValid && <p className="center">Fill all the values and use a duration greater than zero.</p>}
     </main>
   )
 }
